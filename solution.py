@@ -126,7 +126,7 @@ def ping(host, timeout=1):
         time.sleep(1)  # one second
     packet_avg = (sum(packet_min) / len(packet_min))
     packet_max = max(packet_min)
-    vars = [str(round(min(packet_min), 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(stdev(stdev_var), 2))]
+    vars = [str(round(min(packet_min), 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(statistics.stdev(packet_min), 2))]
     return vars
 
 if __name__ == '__main__':
