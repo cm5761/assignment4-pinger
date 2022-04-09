@@ -121,7 +121,7 @@ def ping(host, timeout=1):
         print(delay)
         test.append(delay)
         time.sleep(1)  # one second
-    vars = [str(round(min(temp), 2)), str(round((sum(temp) / len(temp)), 2)), str(round(max(temp), 2)),str(round(statistics.stdev(temp), 2))]
+    vars = [str(round(min(test), 2)), str(round((sum(test) / len(test)), 2)), str(round(max(test), 2)),str(round(statistics.stdev(test), 2))]
     return vars
 
 if __name__ == '__main__':
